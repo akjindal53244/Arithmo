@@ -4,6 +4,10 @@
 | ----- |------| ---- |------|-------| ----- |
 | Arithmo-Mistral-7B | 🤗 <a href="https://huggingface.co/akjindal53244/Arithmo-Mistral-7B" target="_blank">HF Link</a> |  - | **74.6**  |  	| apache-2.0 |
 
+
+## Model Finetuning Details
+Due to limited compute budget, Mistral-7B model is instruction-tuned with QLoRA using Single RTX 4090 GPU. Model is instruction-tuned on combination of datasets from [MetaMathQA](https://huggingface.co/datasets/meta-math/MetaMathQA), [lila OOD](https://huggingface.co/datasets/allenai/lila/viewer/ood) and [MathInstruct](https://huggingface.co/datasets/TIGER-Lab/MathInstruct). Further post-processing steps are applied such as deduplication, lower-casing random % of questions, adding diverse set of Python prompts for questions where output is a Python program instead of chain-of-thoughts, and standardizing answer format. Final dataset is of size ~540,000. We plan to release final dataset soon :)
+
 ## Reproducing Results
 
 ### Answer/Response Generation
