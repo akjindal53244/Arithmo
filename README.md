@@ -19,9 +19,15 @@ Due to limited compute budget, Mistral-7B model is instruction-tuned with QLoRA 
 ### Metrics Computation
 
 To reproduce results on GSM8K and MATH datasets using available prediction files in `data/predictions` directory:
-1. Zero Shot performance of [GSM8K](https://huggingface.co/datasets/gsm8k/viewer/main/test) test set using [Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) model: `python eval/gsm8k_compute_metric_zero_shot.py` Script should print: `Total Instances: 1319, Correct Count: 985, Accuracy: 0.7467778620166793`
-2. Zero Shot performance of [MATH](https://huggingface.co/datasets/competition_math/viewer/default/test) test set using [Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) model: `python eval/math_compute_metric_zero_shot.py` Script should print ``
-
+1. Zero Shot performance of [GSM8K](https://huggingface.co/datasets/gsm8k/viewer/main/test) test set using [Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) model: `python eval/gsm8k_compute_metric_zero_shot.py` Script should print:
+   ```
+   Total Instances: 1319, Correct Count: 985, Accuracy: 0.7467778620166793
+   ```
+3. Zero Shot performance of [MATH](https://huggingface.co/datasets/competition_math/viewer/default/test) test set using [Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) model: `python eval/math_compute_metric_zero_shot.py` Script should print:
+   ```
+   Total Instances: 5000, Correct Count: 1266, Accuracy (Correct Count/Total Instances): 0.2532
+   Couldn't find answer for 456 instances. Increase value of max_new_tokens in generation script to solve for these cases.
+   **Note**: Above reported accuracy is a lower bound and may improve if answers for missing 456 instances are also extracted.
 If you want to compute performance on your prediction file, simply update `file_path` in above scripts with location of your prediction file.
 
 
@@ -54,7 +60,7 @@ Results for all models except `Arithmo-Mistral-7B` are taken from [MetaMath](htt
 | WizardMath-13B      | 63.9         | 14.0        |
 | MetaMath-7B         | 66.5         | 19.8        |
 | MetaMath-13B        | 72.3         | 22.4        |
-| **Arithmo-Mistral-7B**  | **74.6**     |         |
+| 🔥 **Arithmo-Mistral-7B**  | **74.6** | **25.32**       |
 | WizardMath-70B      | **81.6**     | 22.7        |
-| MetaMath-70B        | **82.3**     | 26.6        |
+| MetaMath-70B        | **82.3**     | **26.6**        |
 ``
