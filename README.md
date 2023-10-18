@@ -18,6 +18,8 @@ To reproduce results on GSM8K and MATH datasets using available prediction files
 1. Zero Shot performance of [GSM8K](https://huggingface.co/datasets/gsm8k/viewer/main/test) test set using [Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) model: `python eval/gsm8k_compute_metric_zero_shot.py` Script should print: `Total Instances: 1319, Correct Count: 985, Accuracy: 0.7467778620166793`
 2. Zero Shot performance of [MATH](https://huggingface.co/datasets/competition_math/viewer/default/test) test set using [Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) model: `python eval/math_compute_metric_zero_shot.py` Script should print ``
 
+If you want to compute performance on your prediction file, simply update `file_path` in above scripts with location of your prediction file.
+
 
 ## Comparing Arithmo-Mistral-7B with other LLM models.
 Results for all models except `Arithmo-Mistral-7B` are taken from [MetaMath](https://github.com/meta-math/MetaMath/blob/main/README.MD) repository.
