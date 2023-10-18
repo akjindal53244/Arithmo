@@ -37,6 +37,6 @@ Results for all models except `Arithmo-Mistral-7B` are taken from [MetaMath](htt
 | WizardMath-13B      | 63.9         | 14.0        |
 | MetaMath-7B         | 66.5         | 19.8        |
 | MetaMath-13B        | 72.3         | 22.4        |
-| Arithmo-Mistral-7B  | **74.6**     |         |
+| **Arithmo-Mistral-7B**  | **74.6**     |         |
 | WizardMath-70B      | **81.6**     | 22.7        |
 | MetaMath-70B        | **82.3**     | 26.6        |
