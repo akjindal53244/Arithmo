@@ -1,15 +1,26 @@
 # Arithmo-Mistral-7B
-Scripts for akjindal53244/Arithmo-Mistral-7B model.
+
+| Model | Checkpoint | Paper  | GSM8k | MATH  | License|
+| ----- |------| ---- |------|-------| ----- |
+| Arithmo-Mistral-7B | 🤗 <a href="https://huggingface.co/akjindal53244/Arithmo-Mistral-7B" target="_blank">HF Link</a> |  - | **74.6**  |  	| apache-2.0 |
+
+## Reproducing Results
+
+### Answer/Response Generation
+
+1. Run `python eval/gsm8k_generate_response_zero_shot.py` to run zero shot inference on [GSM8K](https://huggingface.co/datasets/gsm8k/viewer/main/test) test set using [Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) model. This script will save output file to `data/predictions/gsm8k/Arithmo-Mistral-7B/predictions_Arithmo_gsm8k_0_shot_COT.json` location.
+2. Run `python eval/math_generate_response_zero_shot.py` to run zero shot inference on [MATH](https://huggingface.co/datasets/competition_math/viewer/default/test) test set using [Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) model. This script will save output file to `data/predictions/gsm8k/Arithmo-Mistral-7B/predictions_Arithmo_MATH_0_shot_COT.json` location.
 
 
-## Compute Metrics
+### Metrics Computation
 
-1. Zero Shot performance of [GSM8K](https://huggingface.co/datasets/gsm8k/viewer/main/test) test set using [Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) model: `python eval/gsm8k_compute_metric_zero_shot.py` You should get output: `Total Instances: 1319, Correct Count: 985, Accuracy: 0.7467778620166793`
-2. Zero Shot performance of [MATH]([https://huggingface.co/datasets/gsm8k/viewer/main/test](https://huggingface.co/datasets/competition_math/viewer/default/test)) test set using [Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) model: `python eval/compute_math_test_metric_zero_shot.py` You should get output: ``
+To reproduce results on GSM8K and MATH datasets using available prediction files in `data/predictions` directory:
+1. Zero Shot performance of [GSM8K](https://huggingface.co/datasets/gsm8k/viewer/main/test) test set using [Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) model: `python eval/gsm8k_compute_metric_zero_shot.py` Script should print: `Total Instances: 1319, Correct Count: 985, Accuracy: 0.7467778620166793`
+2. Zero Shot performance of [MATH](https://huggingface.co/datasets/competition_math/viewer/default/test) test set using [Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) model: `python eval/math_compute_metric_zero_shot.py` Script should print ``
 
 
-## Comparing MetaMath with the LLM models.
-Results for all models except `Arithmo-Mistral-7B` are taken from [MetaMath](https://github.com/meta-math/MetaMath/blob/main/README.MD)
+## Comparing Arithmo-Mistral-7B with other LLM models.
+Results for all models except `Arithmo-Mistral-7B` are taken from [MetaMath](https://github.com/meta-math/MetaMath/blob/main/README.MD) repository.
 
 | Model               | GSM8k Pass@1 | MATH Pass@1 |
 |---------------------|--------------|-------------|
@@ -40,3 +51,4 @@ Results for all models except `Arithmo-Mistral-7B` are taken from [MetaMath](htt
 | **Arithmo-Mistral-7B**  | **74.6**     |         |
 | WizardMath-70B      | **81.6**     | 22.7        |
 | MetaMath-70B        | **82.3**     | 26.6        |
+``
