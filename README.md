@@ -36,7 +36,7 @@ Prediction on [MATH Test set](https://huggingface.co/datasets/competition_math/v
 2. Zero-Shot with PoT: First run `python eval/gsm8k/gsm8k_write_zero_shot_PoT_outputs.py > data/predictions/gsm8k/Arithmo-Mistral-7B/gsm8k_zero_shot_PoT_results.txt`. This complies individual generated python programs and dumps outputs to `data/predictions/gsm8k/Arithmo-Mistral-7B/gsm8k_zero_shot_PoT_results.txt` file. Next, run `python eval/gsm8k/gsm8k_compute_metric_zero_shot_PoT.py` that computes accuracy. Expected output: `Total Instances: 1309, Correct Count: 932, Accuracy: 0.7119938884644768`
 
 [MATH Test set](https://huggingface.co/datasets/competition_math/viewer/default/test)
-1. Run `python eval/MATH/MATH_compute_metric_zero_shot_CoT.py`. Expected output: `Total Instances: 5000, Correct Count: 1266, Accuracy (Correct Count/Total Instances): 0.2532`
+1. Run `python eval/MATH/MATH_compute_metric_zero_shot_CoT.py`. Script is borrowed from official [math repository](https://github.com/hendrycks/math/blob/main/modeling/math_equivalence.py). Expected output: `Total Instances: 5000, Correct Count: 1266, Accuracy (Correct Count/Total Instances): 0.2532`
 
 
 ## Comparing Arithmo-Mistral-7B with other LLM models.
