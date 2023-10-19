@@ -3,7 +3,7 @@
 [![Model Weight License](https://img.shields.io/badge/Model%20Weights%20License-Apache_2.0-green.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
 
-[Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) is an instruction-tuned [Mistral-7B](https://huggingface.co/mistralai/Mistral-7B-v0.1) model using QLoRA on single RTX 4090 GPU. Model is tuned to reason and answer mathematical problems and is also capable of writing a Python program that upon execution prints answer to the question.
+[Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) is trained to reason and answer mathematical problems and is also capable of writing a Python program that upon execution prints answer to the question. We used [Mistral-7B](https://huggingface.co/mistralai/Mistral-7B-v0.1) as a base model and used QLoRA to fine-tune it on a single RTX 4090 GPU.
 
 
 ## Results
@@ -104,7 +104,7 @@ It will perform best if queried in this way with your own script.
 
 
 ## Model Finetuning Details
-Due to limited compute budget, Mistral-7B model is instruction-tuned with QLoRA using Single RTX 4090 GPU. We plan to do a full finetuning of Mistral-7B model on this dataset to further improve performance. <br>
+Due to limited compute budget, Mistral-7B model is fine-tuned with QLoRA using Single RTX 4090 GPU. We plan to do a full finetuning of Mistral-7B model on this dataset to further improve performance. <br>
 <br>
 **P.S.:** Please reach out to [Ashvini Jindal](https://www.linkedin.com/in/ashvini-jindal-26653262/) if you would be interested in supporting compute need. We are looking for small-scale support so we'd appreciate any kind of help! :)
 
