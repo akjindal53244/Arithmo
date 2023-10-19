@@ -42,14 +42,14 @@ Arithmo-Mistral-7B outperforms existing 7B and 13B state-of-the-art Mathematical
 
 Arithmo-Mistral-7B is trained with the following format:
 
-### CoT Format:
+### CoT Format (generate reasoning steps with answer):
 ```
 Question: <question>
 
 Answer:
 ```
 
-### PoT Format:
+### PoT Format (generate a python program):
 ```
 Question: <question> <python_prompt>
 
