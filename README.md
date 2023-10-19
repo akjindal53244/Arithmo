@@ -42,13 +42,14 @@ Arithmo-Mistral-7B outperforms existing 7B and 13B state-of-the-art Mathematical
 
 ```
 # Set `run_model_on_gpu` to `False` if you are running on CPU. Model will generate reasoning steps with answer for your question. If you want to generate Python program, uncomment line-69 that adds a Python prompt.
-# This script does formatting for you so you just need to type your question.
+# This script automatically does formatting for you, so you just need to type question (eg: `What is 2+2?`) without any prefix like `Question:`, etc.**
 
 $ python query_model.py
 ```
+**Note:** Above script automatically does formatting for you, so you just need to type question (eg: `What is 2+2?`) without any prefix like `Question:`, etc. Refer to the script for more details. <br><br>
 
-**Note:** Arithmo-Mistral-7B is trained with the following format:
 
+Arithmo-Mistral-7B is trained with the following format:
 #### CoT Format (generate reasoning steps with answer):
 ```
 Question: <question>
@@ -62,7 +63,7 @@ Question: <question> <python_prompt>
 
 Answer:
 ```
-It will perform best if queried in this way. For `python_prompt`, look for potential examples [here](https://github.com/akjindal53244/Arithmo-Mistral-7B/blob/master/data/python_coding_prompts.txt). During inference, we use a simple python prompt `Write a Python program to solve this.`
+It will perform best if queried in this way with your own script.
 
 
 ## Model Finetuning Details
