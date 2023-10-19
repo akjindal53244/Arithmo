@@ -111,11 +111,13 @@ Due to limited compute budget, Mistral-7B model is fine-tuned with QLoRA using S
 ## Reproducing Results
 
 ### Model Training Data
-Model training data is prepared by combining [MetaMathQA](https://huggingface.co/datasets/meta-math/MetaMathQA), [lila OOD](https://huggingface.co/datasets/allenai/lila/viewer/ood) and [MathInstruct](https://huggingface.co/datasets/TIGER-Lab/MathInstruct) datasets. Further post-processing steps are applied such as 1) deduplication, 2) randomly lower-casing x% inputs, 3) adding diverse set of Python prompts for PoT, and 4) standardizing answer format. Final dataset is of size ~540,000.
+Model training data is prepared by combining [MetaMathQA](https://huggingface.co/datasets/meta-math/MetaMathQA) (train split), [lila OOD](https://huggingface.co/datasets/allenai/lila/viewer/ood) (train, validation, and test splits), and [MathInstruct](https://huggingface.co/datasets/TIGER-Lab/MathInstruct) (train split) datasets. We have verified that our training data has no overlap with GSM8K and MATH test set. Further post-processing steps are applied such as 1) deduplication, 2) randomly lower-casing x% inputs, 3) adding diverse set of Python prompts for PoT, and 4) standardizing answer format. Final dataset is of size ~540,000.
 ```
 # This script generates train and eval sets.
 $ python data_prep/prepare_model_traininig_data.py
 ```
+
+Here is [Huggingface link](https://huggingface.co/datasets/akjindal53244/Arithmo-Data) for our dataset.
 
 ### Answer/Response Generation
 
