@@ -90,8 +90,8 @@ Expected output: `Total Instances: 1319, Correct Count: 985, Accuracy (Correct C
 # Step-1: This script executes generated python programs and saves results into a file.
 $ python eval/gsm8k/gsm8k_write_zero_shot_PoT_outputs.py > data/predictions/gsm8k/Arithmo-Mistral-7B/gsm8k_zero_shot_PoT_results.txt
 
-# Step-2: This script computes accuracy:
-$ python eval/gsm8k/gsm8k_compute_metric_zero_shot_PoT.py by taking above files as input.
+# Step-2: This script computes accuracy by taking above file as input.
+$ python eval/gsm8k/gsm8k_compute_metric_zero_shot_PoT.py
 ```
 Expected output: `Total Instances: 1309, Correct Count: 932, Accuracy: 0.7119`
 
