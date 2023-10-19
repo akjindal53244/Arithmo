@@ -59,19 +59,19 @@ Answer:
 It will perform best if queried in this way. For `python_prompt`, look for potential examples [here](https://github.com/akjindal53244/Arithmo-Mistral-7B/blob/master/data/python_coding_prompts.txt). During inference, we use a simple python prompt `Write a Python program to solve this.`
 
 
-## Model Training Data
-Model training data is prepared by combining [MetaMathQA](https://huggingface.co/datasets/meta-math/MetaMathQA), [lila OOD](https://huggingface.co/datasets/allenai/lila/viewer/ood) and [MathInstruct](https://huggingface.co/datasets/TIGER-Lab/MathInstruct) datasets. Further post-processing steps are applied such as 1) deduplication, 2) randomly lower-casing x% inputs, 3) adding diverse set of Python prompts for PoT, and 4) standardizing answer format. Final dataset is of size ~540,000.
-```
-$ python data_prep/prepare_model_traininig_data.py
-```
-This script generates train and eval sets.
-
 ## Model Finetuning Details
 Due to limited compute budget, Mistral-7B model is instruction-tuned with QLoRA using Single RTX 4090 GPU. We plan to do a full finetuning of Mistral-7B model on this dataset to further improve performance. <br>
 <br>
 **P.S.:** Please reach out to [Ashvini Jindal](https://www.linkedin.com/in/ashvini-jindal-26653262/) if you would be interested in supporting compute need. We are looking for small-scale support so we'd appreciate any kind of help! :)
 
 ## Reproducing Results
+
+### Model Training Data
+Model training data is prepared by combining [MetaMathQA](https://huggingface.co/datasets/meta-math/MetaMathQA), [lila OOD](https://huggingface.co/datasets/allenai/lila/viewer/ood) and [MathInstruct](https://huggingface.co/datasets/TIGER-Lab/MathInstruct) datasets. Further post-processing steps are applied such as 1) deduplication, 2) randomly lower-casing x% inputs, 3) adding diverse set of Python prompts for PoT, and 4) standardizing answer format. Final dataset is of size ~540,000.
+```
+$ python data_prep/prepare_model_traininig_data.py
+```
+This script generates train and eval sets.
 
 ### Answer/Response Generation
 
