@@ -48,7 +48,7 @@ This script generates train and eval sets.
 ## Model Finetuning Details
 Due to limited compute budget, Mistral-7B model is instruction-tuned with QLoRA using Single RTX 4090 GPU. We plan to do a full finetuning of Mistral-7B model on this dataset to further improve performance. <br>
 <br>
-**P.S.:** Please reach out to [Ashvini Jindal](https://www.linkedin.com/in/ashvini-jindal-26653262/) if you would be interested in supporting compute need. We'd appreciate any help! :)
+**P.S.:** Please reach out to [Ashvini Jindal](https://www.linkedin.com/in/ashvini-jindal-26653262/) if you would be interested in supporting compute need. We are looking for small-scale support so we'd appreciate any kind of help! :)
 
 ## Reproducing Results
 
@@ -87,11 +87,11 @@ $ python eval/gsm8k/gsm8k_compute_metric_zero_shot_CoT.py
 Expected output: `Total Instances: 1319, Correct Count: 985, Accuracy (Correct Count/Total Instances): 0.7467` <br> <br>
 ##### Zero-Shot with PoT:
 ```
+# Step-1: This script executes generated python programs and saves results into a file.
 $ python eval/gsm8k/gsm8k_write_zero_shot_PoT_outputs.py > data/predictions/gsm8k/Arithmo-Mistral-7B/gsm8k_zero_shot_PoT_results.txt
-```
-This complies individual generated python programs and dumps outputs to `data/predictions/gsm8k/Arithmo-Mistral-7B/gsm8k_zero_shot_PoT_results.txt` file. Next, to compute accuracy, run 
-```
-$ python eval/gsm8k/gsm8k_compute_metric_zero_shot_PoT.py
+
+# Step-2: This script computes accuracy:
+$ python eval/gsm8k/gsm8k_compute_metric_zero_shot_PoT.py by taking above files as input.
 ```
 Expected output: `Total Instances: 1309, Correct Count: 932, Accuracy: 0.7119`
 
