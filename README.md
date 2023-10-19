@@ -1,4 +1,8 @@
 # Arithmo-Mistral-7B
+[![Code License](https://img.shields.io/badge/Code%20License-Apache_2.0-green.svg)](CODE_LICENSE)
+[![Model Weight License](https://img.shields.io/badge/Model%20Weights%20License-Apache_2.0-green.svg)](LICENSE)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
+
 [Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) is an instruction-tuned [Mistral-7B](https://huggingface.co/mistralai/Mistral-7B-v0.1) model using QLoRA on single RTX 4090 GPU. Model is tuned to reason and answer mathematical problems and is also capable of writing a Python program that upon execution prints answer to the question.
 
 
