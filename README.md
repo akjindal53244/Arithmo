@@ -45,15 +45,18 @@ Arithmo-Mistral-7B outperforms existing 7B and 13B state-of-the-art Mathematical
 ## Installation
 
 ```
-# If you are GPU poor like me
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
-# If you have a GPU
-pip install --pre torch --index-url https://download.pytorch.org/whl/nightly/cu118
-
 pip install transformers
 pip install accelerate
 pip install sentencepiece
 pip install protobuf
+
+# If you are GPU poor like me
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
+# If you have a GPU.
+pip install --pre torch --index-url https://download.pytorch.org/whl/nightly/cu118
+pip install scipy
+pip install bitsandbytes
 ```
 
 
