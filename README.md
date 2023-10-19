@@ -74,7 +74,7 @@ $ python eval/MATH/MATH_generate_response_zero_shot_CoT.py
 ```
 This script saves output to `data/predictions/gsm8k/Arithmo-Mistral-7B/predictions_Arithmo_MATH_zero_shot_CoT.json` path.
 
-##### Zero-Shot with PoT: Answers in MATH test set consist of expressions like `(x+2)/5` instead of a real int/float value. Currently, Arithmo-Mistral-7B's PoT training data doesn't contain expressions as answers. Hence, we don't run PoT based inference on MATH dataset.
+**Zero-Shot with PoT**: Answers in MATH test set consist of expressions like `(x+2)/5` instead of a numeric value. Currently, Arithmo-Mistral-7B's PoT training data doesn't contain expressions as answers. Hence, we don't run PoT based inference on MATH dataset.
 
 
 ### Metrics Computation
