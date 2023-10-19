@@ -207,6 +207,3 @@ Results for all models except `Arithmo-Mistral-7B` are taken from [MetaMath](htt
 ## Todos
 
 - 
-
-## Sample Generation from Arithmo-Mistral-7B model
-![image](https://github.com/akjindal53244/Arithmo-Mistral-7B/assets/5215386/e544bf81-0f1a-4f7b-aa35-9b1d90b31c6e)
