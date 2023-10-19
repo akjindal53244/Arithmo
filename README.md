@@ -1,9 +1,9 @@
 # Arithmo-Mistral-7B
 
-| Model | Method | Checkpoint | Paper  | GSM8k | MATH  | License|
-| ----- | ------ | ------ | ---- |------|-------| ----- |
-| Arithmo-Mistral-7B | Zero-Shot PoT | 🤗 <a href="https://huggingface.co/akjindal53244/Arithmo-Mistral-7B" target="_blank">HF Link</a> |  - | **71.04**  |  -	| apache-2.0 |
-| Arithmo-Mistral-7B | Zero-Shot CoT | Same as above † |  - | **74.6**  |  **25.32**	| apache-2.0 |
+| Model | Method | Checkpoint | GSM8k | MATH  | License|
+| ----- | ------ | ------ | ------|-------| ----- |
+| Arithmo-Mistral-7B | Zero-Shot PoT | 🤗 <a href="https://huggingface.co/akjindal53244/Arithmo-Mistral-7B" target="_blank">HF Link</a> | **71.04** |  -	| apache-2.0 |
+| Arithmo-Mistral-7B | Zero-Shot CoT | Same as above † | **74.6** |  **25.32**	| apache-2.0 |
 
 - **Zero-Shot PoT**: For a given question, model generates a Python program. Upon compiling the Python program, we check if output matches with ground-truth.
 - **Zero-Shot CoT**: For a given question, model generates reasoning steps along with answer. We check if answer matches with ground-truth.
