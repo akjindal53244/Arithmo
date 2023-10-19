@@ -49,6 +49,6 @@ for i in range(0, dataset_size, batch_size):
     count += len(output)
     print(count)
 
-with open('data/predictions/gsm8k/Arithmo-Mistral-7B/predictions_Arithmo_gsm8k_0_shot_POT.json', 'w') as f:
+with open('data/predictions/gsm8k/Arithmo-Mistral-7B/predictions_Arithmo_gsm8k_zero_shot_PoT.json', 'w') as f:
     json.dump(predictions, f, indent=1)
 

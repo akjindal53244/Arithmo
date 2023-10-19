@@ -20,8 +20,8 @@ Due to limited compute budget, Mistral-7B model is instruction-tuned with QLoRA 
 
 ### Answer/Response Generation
 
-1. Run `python eval/gsm8k_generate_response_zero_shot.py` to run zero shot inference on [GSM8K](https://huggingface.co/datasets/gsm8k/viewer/main/test) test set using [Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) model. This script will save output file to `data/predictions/gsm8k/Arithmo-Mistral-7B/predictions_Arithmo_gsm8k_0_shot_COT.json` location.
-2. Run `python eval/math_generate_response_zero_shot.py` to run zero shot inference on [MATH](https://huggingface.co/datasets/competition_math/viewer/default/test) test set using [Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) model. This script will save output file to `data/predictions/gsm8k/Arithmo-Mistral-7B/predictions_Arithmo_MATH_0_shot_COT.json` location.
+1. Run `python eval/gsm8k_generate_response_zero_shot.py` to run zero shot inference on [GSM8K](https://huggingface.co/datasets/gsm8k/viewer/main/test) test set using [Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) model. This script will save output file to `data/predictions/gsm8k/Arithmo-Mistral-7B/predictions_Arithmo_gsm8k_zero_shot_CoT.json` location.
+2. Run `python eval/math_generate_response_zero_shot.py` to run zero shot inference on [MATH](https://huggingface.co/datasets/competition_math/viewer/default/test) test set using [Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) model. This script will save output file to `data/predictions/gsm8k/Arithmo-Mistral-7B/predictions_Arithmo_MATH_zero_shot_CoT.json` location.
 
 
 ### Metrics Computation

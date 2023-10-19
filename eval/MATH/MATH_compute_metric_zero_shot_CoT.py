@@ -225,7 +225,7 @@ def get_result(ground_truth_solution, generated_text, question, pos):
 
 
 correct, total, missing_answer_count = 0, 0, 0
-file_path = "data/predictions/MATH/Arithmo-Mistral-7B/predictions_Arithmo_math_0_shot_COT.json"
+file_path = "data/predictions/MATH/Arithmo-Mistral-7B/predictions_Arithmo_math_zero_shot_CoT.json"
 
 with open(file_path, 'r') as f:
     data = json.load(f)
@@ -241,5 +241,5 @@ with open(file_path, 'r') as f:
 print(f"\nTotal Instances: {total}, Correct Count: {correct}, Accuracy (Correct Count/Total Instances): {correct/total}")
 print(f"\nOut of {total} instances, couldn't find answer for {missing_answer_count} instances.")
 
-with open('data/predictions/MATH/Arithmo-Mistral-7B/incorrect_predictions_Arithmo_math_0_shot_COT.json', 'w') as f:
+with open('data/predictions/MATH/Arithmo-Mistral-7B/incorrect_predictions_Arithmo_math_zero_shot_CoT.json', 'w') as f:
         json.dump(incorrect_prediction_records, f, indent=1)

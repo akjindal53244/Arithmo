@@ -1,6 +1,6 @@
 import json
 
-file_path = "data/predictions/gsm8k/Arithmo-Mistral-7B/predictions_Arithmo_gsm8k_0_shot_COT.json"
+file_path = "data/predictions/gsm8k/Arithmo-Mistral-7B/predictions_Arithmo_gsm8k_zero_shot_CoT.json"
 
 def extract_ground_truth_answer(ground_truth_gen):
     # there are cases when 250000 is written as 250,000. Normalize it to 250000
