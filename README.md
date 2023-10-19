@@ -65,7 +65,7 @@ pip install protobuf
 
 $ python query_model.py
 ```
-**Note:** Above script automatically does formatting for you, so you just need to type question (eg: `What is 2+2?`) without any prefix like `Question:`, etc. Checkout to the script for more details. <br><br>
+**Note:** Above script automatically does formatting for you, so you just need to type question (eg: `What is 2+2?`) without any prefix like `Question:`, etc. Checkout `query_model.py` for more details. <br><br>
 
 
 Arithmo-Mistral-7B is trained with the following format:
