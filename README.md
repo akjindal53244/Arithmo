@@ -80,31 +80,31 @@ Due to limited compute budget, Mistral-7B model is instruction-tuned with QLoRA 
 ### Model Training Data
 Model training data is prepared by combining [MetaMathQA](https://huggingface.co/datasets/meta-math/MetaMathQA), [lila OOD](https://huggingface.co/datasets/allenai/lila/viewer/ood) and [MathInstruct](https://huggingface.co/datasets/TIGER-Lab/MathInstruct) datasets. Further post-processing steps are applied such as 1) deduplication, 2) randomly lower-casing x% inputs, 3) adding diverse set of Python prompts for PoT, and 4) standardizing answer format. Final dataset is of size ~540,000.
 ```
+# This script generates train and eval sets.
 $ python data_prep/prepare_model_traininig_data.py
 ```
-This script generates train and eval sets.
 
 ### Answer/Response Generation
 
 #### Prediction on [GSM8K Test set](https://huggingface.co/datasets/gsm8k/viewer/main/test)
 ##### Zero-Shot with CoT:
 ```
+# This script saves output to `data/predictions/gsm8k/Arithmo-Mistral-7B/predictions_Arithmo_gsm8k_zero_shot_CoT.json` path.
 $ python eval/gsm8k/gsm8k_generate_response_zero_shot_CoT.py
 ```
-This script saves output to `data/predictions/gsm8k/Arithmo-Mistral-7B/predictions_Arithmo_gsm8k_zero_shot_CoT.json` path.
 
 ##### Zero-Shot with PoT:
 ```
+# This script saves output to `data/predictions/gsm8k/Arithmo-Mistral-7B/predictions_Arithmo_gsm8k_zero_shot_PoT.json` path.
 $ python eval/gsm8k/gsm8k_generate_response_zero_shot_PoT.py
 ```
-This script saves output to `data/predictions/gsm8k/Arithmo-Mistral-7B/predictions_Arithmo_gsm8k_zero_shot_PoT.json` path.
 
 #### Prediction on [MATH Test set](https://huggingface.co/datasets/competition_math/viewer/default/test)
 ##### Zero-Shot with CoT:
 ```
+# This script saves output to `data/predictions/gsm8k/Arithmo-Mistral-7B/predictions_Arithmo_MATH_zero_shot_CoT.json` path.
 $ python eval/MATH/MATH_generate_response_zero_shot_CoT.py
 ```
-This script saves output to `data/predictions/gsm8k/Arithmo-Mistral-7B/predictions_Arithmo_MATH_zero_shot_CoT.json` path.
 
 **Zero-Shot with PoT**: Answers in MATH test set consist of expressions like `(x+2)/5` instead of a numeric value. Currently, Arithmo-Mistral-7B's PoT training data doesn't contain expressions as answers. Hence, we don't run PoT based inference on MATH dataset.
 
