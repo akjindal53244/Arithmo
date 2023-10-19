@@ -70,11 +70,11 @@ $ python query_model.py
 ```
 **Note:** Above script automatically does formatting for you, so you just need to type question (eg: `What is 2+2?`) without any prefix like `Question:`, etc. Checkout `query_model.py` for more details. <br><br>
 
-#### Sample Input:
+##### Sample Input:
 ```
 Question: There are total 10 children. I have to give 1 apple to first child, 2 apples to second child, 3 apples to third child, and so on. How many apples do I need?
 ```
-#### Model Output:
+##### Model Output:
 ```
 Answer: The total number of apples needed is the sum of the first 10 positive integers.
 This can be calculated using the formula for the sum of an arithmetic series:
