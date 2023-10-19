@@ -55,37 +55,37 @@ Due to limited compute budget, Mistral-7B model is instruction-tuned with QLoRA 
 ### Answer/Response Generation
 
 #### Prediction on [GSM8K Test set](https://huggingface.co/datasets/gsm8k/viewer/main/test)
-**Zero-Shot with CoT:**
+##### Zero-Shot with CoT:
 ```
 $ python eval/gsm8k/gsm8k_generate_response_zero_shot_CoT.py
 ```
 This script saves output to `data/predictions/gsm8k/Arithmo-Mistral-7B/predictions_Arithmo_gsm8k_zero_shot_CoT.json` path.
 
-**Zero-Shot with PoT:**
+##### Zero-Shot with PoT:
 ```
 $ python eval/gsm8k/gsm8k_generate_response_zero_shot_PoT.py
 ```
 This script saves output to `data/predictions/gsm8k/Arithmo-Mistral-7B/predictions_Arithmo_gsm8k_zero_shot_PoT.json` path.
 
 #### Prediction on [MATH Test set](https://huggingface.co/datasets/competition_math/viewer/default/test)
-**Zero-Shot with CoT:** 
+##### Zero-Shot with CoT:
 ```
 $ python eval/MATH/MATH_generate_response_zero_shot_CoT.py
 ```
 This script saves output to `data/predictions/gsm8k/Arithmo-Mistral-7B/predictions_Arithmo_MATH_zero_shot_CoT.json` path.
 
-**Zero-Shot with PoT:** Answers in MATH test set consist of expressions like `(x+2)/5` instead of a real int/float value. Currently, Arithmo-Mistral-7B's PoT training data doesn't contain expressions as answers. Hence, we don't run PoT based inference on MATH dataset.
+##### Zero-Shot with PoT: Answers in MATH test set consist of expressions like `(x+2)/5` instead of a real int/float value. Currently, Arithmo-Mistral-7B's PoT training data doesn't contain expressions as answers. Hence, we don't run PoT based inference on MATH dataset.
 
 
 ### Metrics Computation
 
 #### [GSM8K Test set](https://huggingface.co/datasets/gsm8k/viewer/main/test)
-**Zero-Shot with CoT:** 
+##### Zero-Shot with CoT:
 ```
 $ python eval/gsm8k/gsm8k_compute_metric_zero_shot_CoT.py
 ```
 Expected output: `Total Instances: 1319, Correct Count: 985, Accuracy (Correct Count/Total Instances): 0.7467` <br> <br>
-**Zero-Shot with PoT:** 
+##### Zero-Shot with PoT:
 ```
 $ python eval/gsm8k/gsm8k_write_zero_shot_PoT_outputs.py > data/predictions/gsm8k/Arithmo-Mistral-7B/gsm8k_zero_shot_PoT_results.txt
 ```
@@ -96,7 +96,7 @@ $ python eval/gsm8k/gsm8k_compute_metric_zero_shot_PoT.py
 Expected output: `Total Instances: 1309, Correct Count: 932, Accuracy: 0.7119`
 
 #### [MATH Test set](https://huggingface.co/datasets/competition_math/viewer/default/test)
-**Zero-Shot with CoT:** 
+##### Zero-Shot with CoT:
 ```
 $ python eval/MATH/MATH_compute_metric_zero_shot_CoT.py
 ```
