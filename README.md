@@ -40,22 +40,28 @@ Arithmo-Mistral-7B outperforms existing 7B and 13B state-of-the-art Mathematical
 
 ## How to query the model
 
-Arithmo-Mistral-7B is trained with the following format:
+```
+# Set `run_model_on_gpu` to `False` if you are running on CPU. Model will generate reasoning steps with answer for your question. If you want to generate Python program, uncomment line-69 that adds a Python prompt.
+# This script does formatting for you so you just need to type your question.
 
-### CoT Format (generate reasoning steps with answer):
+$ python query_model.py
+```
+
+**Note:** Arithmo-Mistral-7B is trained with the following format:
+
+#### CoT Format (generate reasoning steps with answer):
 ```
 Question: <question>
 
 Answer:
 ```
 
-### PoT Format (generate a python program):
+#### PoT Format (generate a python program):
 ```
 Question: <question> <python_prompt>
 
 Answer:
 ```
-
 It will perform best if queried in this way. For `python_prompt`, look for potential examples [here](https://github.com/akjindal53244/Arithmo-Mistral-7B/blob/master/data/python_coding_prompts.txt). During inference, we use a simple python prompt `Write a Python program to solve this.`
 
 
