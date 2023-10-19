@@ -56,7 +56,7 @@ Question: <question> <python_prompt>
 Answer:
 ```
 
-It will perform best if queried in this way.
+It will perform best if queried in this way. For `python_prompt`, look for potential examples [here](https://github.com/akjindal53244/Arithmo-Mistral-7B/blob/master/data/python_coding_prompts.txt). During inference, we use a simple python prompt `Write a Python program to solve this.`
 
 
 ## Model Training Data
