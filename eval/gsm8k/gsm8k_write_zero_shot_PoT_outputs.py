@@ -1,4 +1,4 @@
-# Run this file as 'python eval/gsm8k_write_zero_shot_PoT_outputs.py > data/predictions/gsm8k/Arithmo-Mistral-7B/gsm8k_zero_shot_PoT_results.txt'
+# Run this file as 'python eval/gsm8k/gsm8k_write_zero_shot_PoT_outputs.py > data/predictions/gsm8k/Arithmo-Mistral-7B/gsm8k_zero_shot_PoT_results.txt'
 
 import json
 
