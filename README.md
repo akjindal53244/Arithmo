@@ -1,15 +1,20 @@
 # Arithmo-Mistral-7B
 
-| Model | Checkpoint | Paper  | GSM8k | MATH  | License|
-| ----- |------| ---- |------|-------| ----- |
-| Arithmo-Mistral-7B | 🤗 <a href="https://huggingface.co/akjindal53244/Arithmo-Mistral-7B" target="_blank">HF Link</a> |  - | **74.6**  |  **25.32**	| apache-2.0 |
+| Model | Method | Checkpoint | Paper  | GSM8k | MATH  | License|
+| ----- | ------ | ------ | ---- |------|-------| ----- |
+| Arithmo-Mistral-7B | Zero-Shot PoT | 🤗 <a href="https://huggingface.co/akjindal53244/Arithmo-Mistral-7B" target="_blank">HF Link</a> |  - | **71.04**  |  -	| apache-2.0 |
+| Arithmo-Mistral-7B | Zero-Shot CoT | Same as above † |  - | **74.6**  |  **25.32**	| apache-2.0 |
 
+- **Zero-Shot PoT**: For a given question, model generates a Python program. Upon compiling the Python program, we check if output matches with ground-truth.
+- **Zero-Shot CoT**: For a given question, model generates reasoning steps along with answer. We check if answer matches with ground-truth.
+
+† Same model is used to generate CoT and PoT both. To generate PoT (i.e. Python Program), model is prompted to generate a Python program. Few examples of prompts to generate PoT are "Write a Python program.", "Solve it in Python", etc. Prompt is appended to input question during training and inference both. Visit [Model Card](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) to see few PoT examples.
 
 ## Model Training Data
 Model training data is prepared via combining [MetaMathQA](https://huggingface.co/datasets/meta-math/MetaMathQA), [lila OOD](https://huggingface.co/datasets/allenai/lila/viewer/ood) and [MathInstruct](https://huggingface.co/datasets/TIGER-Lab/MathInstruct) datasets. Further post-processing steps are applied such as deduplication, lower-casing random % of questions, adding diverse set of Python prompts for questions where output is a Python program instead of chain-of-thoughts, and standardizing answer format. Final dataset is of size ~540,000. Refer to `data_prep/prepare_model_traininig_data.py` for exact implementation and reproducing the train/eval sets.
 
 ## Model Finetuning Details
-Due to limited compute budget, Mistral-7B model is instruction-tuned with QLoRA using Single RTX 4090 GPU.
+Due to limited compute budget, Mistral-7B model is instruction-tuned with QLoRA using Single RTX 4090 GPU. We plan to do a full finetuning of Mistral-7B model on this dataset to further improve performance.
 
 ## Reproducing Results
 
@@ -63,7 +68,8 @@ Results for all models except `Arithmo-Mistral-7B` are taken from [MetaMath](htt
 | WizardMath-13B      | 63.9         | 14.0        |
 | MetaMath-7B         | 66.5         | 19.8        |
 | MetaMath-13B        | 72.3         | 22.4        |
-| 🔥 **Arithmo-Mistral-7B**  | **74.6** | **25.32**       |
+| 🔥 **Arithmo-Mistral-7B Zero-Shot PoT**  | **71.04** | --       |
+| 🔥 **Arithmo-Mistral-7B Zero-Shot CoT**  | **74.6** | **25.32**       |
 | WizardMath-70B      | **81.6**     | 22.7        |
 | MetaMath-70B        | **82.3**     | **26.6**        |
 ``
