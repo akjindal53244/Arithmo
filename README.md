@@ -141,7 +141,6 @@ Results for all models except `Arithmo-Mistral-7B` are taken from [MetaMath](htt
 
 ## Todos
 
-- Perform Full Finetuning
 - 
 
 ## Sample Generation from Arithmo-Mistral-7B model
