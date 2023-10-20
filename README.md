@@ -45,7 +45,7 @@ Arithmo-Mistral-7B outperforms existing 7B and 13B state-of-the-art Mathematical
 ## Installation
 
 ```
-pip install transformers
+pip install transformers >=4.34.0
 pip install accelerate
 pip install sentencepiece
 pip install protobuf
