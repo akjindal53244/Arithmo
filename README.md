@@ -15,6 +15,7 @@ Arithmo-Mistral-7B outperforms existing 7B and 13B state-of-the-art Mathematical
         <tr>
             <th>Model Name</th>
             <th>Checkpoint</th>
+            <th>Training Approach</th>
             <th>Prompt Approach</th>
             <th>GSM8k</th>
             <th>MATH</th>
@@ -25,6 +26,7 @@ Arithmo-Mistral-7B outperforms existing 7B and 13B state-of-the-art Mathematical
         <tr>
             <td rowspan=2>Arithmo-Mistral-7B</td>
             <td rowspan=2>🤗 <a href="https://huggingface.co/akjindal53244/Arithmo-Mistral-7B" target="_blank">Huggingface Link</a></td>
+            <td rowspan=2>4-bit QLoRA Fine-tuning on 1x4090</td>
             <td>Zero-Shot CoT</td>
             <td><b>74.7</b></td>
             <td><b>25.3</b></td>
