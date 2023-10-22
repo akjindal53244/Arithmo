@@ -3,7 +3,7 @@
 [![Model Weight License](https://img.shields.io/badge/Model%20Weights%20License-Apache_2.0-green.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
 
-[Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) is trained to reason and answer mathematical problems and is also capable of writing a Python program that upon execution prints answer to the question. We used [Mistral-7B](https://huggingface.co/mistralai/Mistral-7B-v0.1) as a base model and used QLoRA to fine-tune it on a single RTX 4090 GPU.
+[Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) is trained to reason and answer mathematical problems and is also capable of writing a Python program that upon execution prints answer to the question. We used [Mistral-7B](https://huggingface.co/mistralai/Mistral-7B-v0.1) as a base model and used **QLoRA to fine-tune it on a single RTX 4090 GPU**.
 
 
 ## Results
@@ -207,5 +207,31 @@ Results for all models except `Arithmo-Mistral-7B` are taken from [MetaMath](htt
 
 
 ## Todos
-
 - 
+
+
+<h2 id="References">References</h2>
+
+```
+@article{yu2023metamath,
+  title={MetaMath: Bootstrap Your Own Mathematical Questions for Large Language Models},
+  author={Yu, Longhui and Jiang, Weisen and Shi, Han and Yu, Jincheng and Liu, Zhengying and Zhang, Yu and Kwok, James T and Li, Zhenguo and Weller, Adrian and Liu, Weiyang},
+  journal={arXiv preprint arXiv:2309.12284},
+  year={2023}
+}
+
+@article{Yue2023mammoth,
+  title={MAmmoTH: Building math generalist models through hybrid instruction tuning},
+  author={Xiang Yue, Xingwei Qu, Ge Zhang, Yao Fu, Wenhao Huang, Huan Sun, Yu Su, and Wenhu Chen},
+  journal={arXiv preprint arXiv:2309.05653},
+  year={2023}
+}
+
+@article{mishra2022lila,
+  title={Lila: A unified benchmark for mathematical reasoning},
+  author={Swaroop Mishra, Matthew Finlayson, Pan Lu, Leonard Tang, Sean Welleck, Chitta Baral, Tanmay Rajpurohit, Oyvind Tafjord, Ashish Sabharwal, Peter Clark, and Ashwin Kalyan},
+  journal={arXiv preprint arXiv:2210.17517},
+  year={2022}
+}
+
+```
