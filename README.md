@@ -224,7 +224,7 @@ Results for all models except `Arithmo-Mistral-7B` are taken from [MetaMath](htt
 | MetaMath-13B        | 72.3         | 22.4        |
 | Arithmo-Mistral-7B Zero-Shot PoT  | 71.2 | --       | SFT: 4-bit QLoRA |
 | Arithmo-Mistral-7B Zero-Shot CoT  | 74.7 | 25.3       | SFT: 4-bit QLoRA |
-| MetaMath-Mistral-7B  | 77.7 | 27.2       | SFT: Full fine-tuned |
+| MetaMath-Mistral-7B  | 77.7 | 28.2       | SFT: Full fine-tuned |
 | 🔥 **Arithmo2-7B Zero-Shot PoT**  | **74.2** | --       | **SFT: 4-bit QLoRA** |
 | 🔥 **Arithmo2-7B Zero-Shot CoT**  | **76.4** | **27.2**       | **SFT: 4-bit QLoRA** |
 
