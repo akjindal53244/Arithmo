@@ -1,7 +1,13 @@
+**\*\*\*\*\* **Update January 2024: Release of Arithmo2-7B model: Improvement on both GSM8K and MATH.** **\*\*\*\*\*
+
+We are excited to release **Arithmo2-7B** model that improves Arithmo-Mistral-7B model on both GSM8K and MATH benchmarks. Specifically, there is absolute improvement of +1.7% on GSM8K CoT, +3.0% on GSM8K PoT, and +1.9% on MATH bechmarks. We release both [merged model](https://huggingface.co/upaya07/Arithmo2-7B) and [LoRA Adapter](https://huggingface.co/upaya07/Arithmo2-7B-adapter) of Arithmo2-7B model.
+
+
 # Arithmo-Mistral-7B
 [![Code License](https://img.shields.io/badge/Code%20License-Apache_2.0-green.svg)](LICENSE)
 [![Model Weight License](https://img.shields.io/badge/Model%20Weights%20License-Apache_2.0-green.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
+
 
 [Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) is trained to reason and answer mathematical problems and is also capable of writing a Python program that upon execution prints answer to the question. We used [Mistral-7B](https://huggingface.co/mistralai/Mistral-7B-v0.1) as a base model and used **QLoRA to fine-tune it on a single RTX 4090 GPU**.
 
@@ -25,16 +31,30 @@ Arithmo-Mistral-7B outperforms existing 7B and 13B state-of-the-art Mathematical
     <tbody>
         <tr>
             <td rowspan=2>Arithmo-Mistral-7B</td>
-            <td rowspan=2>🤗 <a href="https://huggingface.co/akjindal53244/Arithmo-Mistral-7B" target="_blank">Huggingface Link</a></td>
+            <td rowspan=2>🤗 <a href="https://huggingface.co/akjindal53244/Arithmo-Mistral-7B" target="_blank">Model</a></td>
             <td rowspan=2>4-bit QLoRA Fine-tuning on 1x4090</td>
             <td>Zero-Shot CoT</td>
-            <td><b>74.7</b></td>
-            <td><b>25.3</b></td>
+            <td>74.7</td>
+            <td>25.3</td>
             <td rowspan=2>Apache-2.0</td>
         </tr>
         <tr>
             <td>Zero-Shot PoT</td>
-            <td><b>71.2</b></td>
+            <td>71.2</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td rowspan=2>🔥 Arithmo2-7B</td>
+            <td rowspan=2>🤗 <a href="https://huggingface.co/upaya07/Arithmo2-7B" target="_blank">Model</a> <br> 🤗 <a href="https://huggingface.co/upaya07/Arithmo2-7B-adapter" target="_blank">LoRA Adapter</a> </td>
+            <td rowspan=2>4-bit QLoRA Fine-tuning on 1x4090</td>
+            <td>Zero-Shot CoT</td>
+            <td><b>76.4</b></td>
+            <td><b>27.2</b></td>
+            <td rowspan=2>Apache-2.0</td>
+        </tr>
+        <tr>
+            <td>Zero-Shot PoT</td>
+            <td><b>74.2</b></td>
             <td>-</td>
         </tr>
     </tbody>
@@ -176,8 +196,8 @@ Expected output: `Total Instances: 5000, Correct Count: 1266, Accuracy (Correct 
 ## Comparing Arithmo-Mistral-7B with other LLM models.
 Results for all models except `Arithmo-Mistral-7B` are taken from [MetaMath](https://github.com/meta-math/MetaMath/blob/main/README.MD) repository.
 
-| Model               | GSM8k Pass@1 | MATH Pass@1 |
-|---------------------|--------------|-------------|
+| Model               | GSM8k Pass@1 | MATH Pass@1 | Fine-tuning |
+|---------------------|--------------|-------------|-------------|
 | MPT-7B              | 6.8          | 3.0         |
 | Falcon-7B           | 6.8          | 2.3         |
 | LLaMA-1-7B          | 11.0         | 2.9         |
@@ -202,11 +222,11 @@ Results for all models except `Arithmo-Mistral-7B` are taken from [MetaMath](htt
 | WizardMath-13B      | 63.9         | 14.0        |
 | MetaMath-7B         | 66.5         | 19.8        |
 | MetaMath-13B        | 72.3         | 22.4        |
-| 🔥 **Arithmo-Mistral-7B Zero-Shot PoT**  | **71.2** | --       |
-| 🔥 **Arithmo-Mistral-7B Zero-Shot CoT**  | **74.7** | **25.3**       |
-| WizardMath-70B      | **81.6**     | 22.7        |
-| MetaMath-70B        | **82.3**     | **26.6**        |
-
+| Arithmo-Mistral-7B Zero-Shot PoT  | 71.2 | --       | SFT: 4-bit QLoRA |
+| Arithmo-Mistral-7B Zero-Shot CoT  | 74.7 | 25.3       | SFT: 4-bit QLoRA |
+| MetaMath-Mistral-7B  | 77.7 | 27.2       | SFT: Full fine-tuned |
+| 🔥 **Arithmo2-7B Zero-Shot PoT**  | **74.2** | --       | **SFT: 4-bit QLoRA** |
+| 🔥 **Arithmo2-7B Zero-Shot CoT**  | **76.4** | **27.2**       | **SFT: 4-bit QLoRA** |
 
 ## Todos
 - 
