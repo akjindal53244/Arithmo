@@ -260,5 +260,5 @@ Results for all models except `Arithmo-Mistral-7B` are taken from [MetaMath](htt
 
 ### Support My Work
 
-Building LLMs requires both time and money :) If you find my work interesting, and would love to support me to continue building interesting open-source models, here is the link <br>:
+Building LLMs takes time and resources; if you find my work interesting, your support would be epic! <br>
 <a href="https://www.buymeacoffee.com/a_little_learner" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
