@@ -1,20 +1,25 @@
-**\*\*\*\*\* **Update January 2024: Release of Arithmo2-7B model: Improvement on both GSM8K and MATH.** **\*\*\*\*\*
+## [January 2024] New Model Release: Arithmo2-Mistral-7B
 
-We are excited to release **Arithmo2-7B** model that improves Arithmo-Mistral-7B model on both GSM8K and MATH benchmarks. Specifically, there is absolute improvement of +1.7% on GSM8K CoT, +3.0% on GSM8K PoT, and +1.9% on MATH bechmarks. We release both [merged model](https://huggingface.co/upaya07/Arithmo2-7B) and [LoRA Adapter](https://huggingface.co/upaya07/Arithmo2-7B-adapter) of Arithmo2-7B model.
+**Arithmo2-Mistral-7B** model improves initially released Arithmo-Mistral-7B model on both GSM8K and MATH benchmarks. Specifically, there is **absolute** improvement of:
+- +1.7% on GSM8K
+- +3.0% on GSM8K PoT
+- +1.9% on MATH
+
+We release both [merged model](https://huggingface.co/upaya07/Arithmo2-Mistral-7B) and [LoRA Adapter](https://huggingface.co/upaya07/Arithmo2-Mistral-7B-adapter).
 
 
-# Arithmo-Mistral-7B
+# Arithmo Models
 [![Code License](https://img.shields.io/badge/Code%20License-Apache_2.0-green.svg)](LICENSE)
 [![Model Weight License](https://img.shields.io/badge/Model%20Weights%20License-Apache_2.0-green.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
 
 
-[Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) is trained to reason and answer mathematical problems and is also capable of writing a Python program that upon execution prints answer to the question. We used [Mistral-7B](https://huggingface.co/mistralai/Mistral-7B-v0.1) as a base model and used **QLoRA to fine-tune it on a single RTX 4090 GPU**.
+Both [Arithmo2-Mistral-7B](https://huggingface.co/upaya07/Arithmo2-Mistral-7B) and [Arithmo-Mistral-7B](https://huggingface.co/akjindal53244/Arithmo-Mistral-7B) models are trained to reason and answer mathematical problems and is also capable of writing a Python program that upon execution prints answer to the question. We used [Mistral-7B](https://huggingface.co/mistralai/Mistral-7B-v0.1) as a base model and used **QLoRA to fine-tune it on a single RTX 4090 GPU**.
 
 
-## Results
+## Benchmark Results
 
-Arithmo-Mistral-7B outperforms existing 7B and 13B state-of-the-art Mathematical Reasoning models. Refer to [Comparing Arithmo-Mistral-7B with other LLM models](https://github.com/akjindal53244/Arithmo-Mistral-7B/tree/master#comparing-arithmo-mistral-7b-with-other-llm-models) section for more details.
+Arithmo2-Mistral-7B model is fine-tuned with 4-bit QLoRA on single GPU and is competitive with supervised full-finetuned state-of-the-art Mathematical Reasoning models. Refer to [Comparing Arithmo-Mistral-7B with other LLM models](https://github.com/akjindal53244/Arithmo-Mistral-7B/tree/master#comparing-arithmo-mistral-7b-with-other-llm-models) section for more details.
 
 <table>
     <thead>
@@ -44,8 +49,8 @@ Arithmo-Mistral-7B outperforms existing 7B and 13B state-of-the-art Mathematical
             <td>-</td>
         </tr>
         <tr>
-            <td rowspan=2>🔥 Arithmo2-7B</td>
-            <td rowspan=2>🤗 <a href="https://huggingface.co/upaya07/Arithmo2-7B" target="_blank">Model</a> <br> 🤗 <a href="https://huggingface.co/upaya07/Arithmo2-7B-adapter" target="_blank">LoRA Adapter</a> </td>
+            <td rowspan=2>🔥 <b>Arithmo2-Mistral-7B</b> </td>
+            <td rowspan=2>🤗 <a href="https://huggingface.co/upaya07/Arithmo2-Mistral-7B" target="_blank">Model</a> <br> 🤗 <a href="https://huggingface.co/upaya07/Arithmo2-Mistral-7B-adapter" target="_blank">LoRA Adapter</a> </td>
             <td rowspan=2>4-bit QLoRA Fine-tuning on 1x4090</td>
             <td>Zero-Shot CoT</td>
             <td><b>76.4</b></td>
@@ -128,12 +133,13 @@ It will perform best if queried in this way with your own script.
 ## Model Finetuning Details
 Due to limited compute budget, Mistral-7B model is fine-tuned with QLoRA using Single RTX 4090 GPU. We plan to do a full finetuning of Mistral-7B model on this dataset to further improve performance. <br>
 <br>
-**P.S.:** Please reach out to [Ashvini Jindal](https://www.linkedin.com/in/ashvini-jindal-26653262/) if you would be interested in supporting compute need. We are looking for small-scale support so we'd appreciate any kind of help! :)
 
 ## Reproducing Results
 
 ### Model Training Data
-Model training data is prepared by combining [MetaMathQA](https://huggingface.co/datasets/meta-math/MetaMathQA) (train split), [lila OOD](https://huggingface.co/datasets/allenai/lila/viewer/ood) (train, validation, and test splits), and [MathInstruct](https://huggingface.co/datasets/TIGER-Lab/MathInstruct) (train split) datasets. We have verified that our training data has no overlap with GSM8K and MATH test set. Further post-processing steps are applied such as 1) deduplication, 2) randomly lower-casing x% inputs, 3) adding diverse set of Python prompts for PoT, and 4) standardizing answer format. Final dataset is of size ~540,000.
+Model training data is prepared by combining [MetaMathQA](https://huggingface.co/datasets/meta-math/MetaMathQA) (train split), [lila OOD](https://huggingface.co/datasets/allenai/lila/viewer/ood) (train, validation, and test splits), and [MathInstruct](https://huggingface.co/datasets/TIGER-Lab/MathInstruct) (train split) datasets. We have verified that our training data has no overlap with GSM8K and MATH test set. Further post-processing steps are applied such as 1) deduplication, 2) randomly lower-casing x% inputs, 3) adding diverse set of Python prompts for PoT, and 4) standardizing answer format. Final dataset is of size ~540,000. 
+Note: To train Arithmo2-Mistral-7B model, we removed both validation and test set of [lila ood subset](https://huggingface.co/datasets/allenai/lila/viewer/ood) to avoid possibility of data leakage.
+
 ```
 # This script generates train and eval sets.
 $ python data_prep/prepare_model_traininig_data.py
@@ -196,8 +202,8 @@ Expected output: `Total Instances: 5000, Correct Count: 1266, Accuracy (Correct 
 ## Comparing Arithmo-Mistral-7B with other LLM models.
 Results for all models except `Arithmo-Mistral-7B` are taken from [MetaMath](https://github.com/meta-math/MetaMath/blob/main/README.MD) repository.
 
-| Model               | GSM8k Pass@1 | MATH Pass@1 | Fine-tuning |
-|---------------------|--------------|-------------|-------------|
+| Model               | GSM8k Pass@1 | MATH Pass@1 | Model Training details |
+|---------------------|--------------|-------------|------------------------|
 | MPT-7B              | 6.8          | 3.0         |
 | Falcon-7B           | 6.8          | 2.3         |
 | LLaMA-1-7B          | 11.0         | 2.9         |
@@ -224,13 +230,24 @@ Results for all models except `Arithmo-Mistral-7B` are taken from [MetaMath](htt
 | MetaMath-13B        | 72.3         | 22.4        |
 | Arithmo-Mistral-7B Zero-Shot PoT  | 71.2 | --       | SFT: 4-bit QLoRA |
 | Arithmo-Mistral-7B Zero-Shot CoT  | 74.7 | 25.3       | SFT: 4-bit QLoRA |
-| MetaMath-Mistral-7B  | 77.7 | 28.2       | SFT: Full fine-tuned |
+| MetaMath-Mistral-7B  | **77.7** | **28.2**       | SFT: Full fine-tuned |
 | 🔥 **Arithmo2-7B Zero-Shot PoT**  | **74.2** | --       | **SFT: 4-bit QLoRA** |
 | 🔥 **Arithmo2-7B Zero-Shot CoT**  | **76.4** | **27.2**       | **SFT: 4-bit QLoRA** |
 
 
 ## Todos
 - 
+
+### Support My Work
+Building LLMs takes time and resources; if you find my work interesting, your support would be epic! <br>
+
+<a href="https://www.buymeacoffee.com/a_little_learner" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
+P.S.: If you are interested in providing compute support, please reach out to [Ashvini Jindal](https://www.linkedin.com/in/ashvini-jindal-26653262/)
+
+
+### Citation
+-
 
 
 <h2 id="References">References</h2>
@@ -257,8 +274,3 @@ Results for all models except `Arithmo-Mistral-7B` are taken from [MetaMath](htt
   year={2022}
 }
 ```
-
-### Support My Work
-
-Building LLMs takes time and resources; if you find my work interesting, your support would be epic! <br>
-<a href="https://www.buymeacoffee.com/a_little_learner" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
