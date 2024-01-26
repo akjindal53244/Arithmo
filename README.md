@@ -137,8 +137,7 @@ Due to limited compute budget, Mistral-7B model is fine-tuned with QLoRA using S
 ## Reproducing Results
 
 ### Model Training Data
-Model training data is prepared by combining [MetaMathQA](https://huggingface.co/datasets/meta-math/MetaMathQA) (train split), [lila OOD](https://huggingface.co/datasets/allenai/lila/viewer/ood) (train, validation, and test splits), and [MathInstruct](https://huggingface.co/datasets/TIGER-Lab/MathInstruct) (train split) datasets. We have verified that our training data has no overlap with GSM8K and MATH test set. Further post-processing steps are applied such as 1) deduplication, 2) randomly lower-casing x% inputs, 3) adding diverse set of Python prompts for PoT, and 4) standardizing answer format. Final dataset is of size ~540,000. 
-Note: To train Arithmo2-Mistral-7B model, we removed both validation and test set of [lila ood subset](https://huggingface.co/datasets/allenai/lila/viewer/ood) to avoid possibility of data leakage.
+Model training data is prepared by combining [MetaMathQA](https://huggingface.co/datasets/meta-math/MetaMathQA) (train split), [lila OOD](https://huggingface.co/datasets/allenai/lila/viewer/ood) (train, validation, and test splits), and [MathInstruct](https://huggingface.co/datasets/TIGER-Lab/MathInstruct) (train split) datasets. We have verified that our training data has no overlap with GSM8K and MATH test set. Further post-processing steps are applied such as 1) deduplication, 2) randomly lower-casing x% inputs, 3) adding diverse set of Python prompts for PoT, and 4) standardizing answer format. Final dataset is of size ~540,000. Also, to train Arithmo2-Mistral-7B model, we removed both validation and test set of [lila ood subset](https://huggingface.co/datasets/allenai/lila/viewer/ood) to avoid possibility of data leakage.
 
 ```
 # This script generates train and eval sets.
