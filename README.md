@@ -19,7 +19,7 @@ Both [Arithmo2-Mistral-7B](https://huggingface.co/upaya07/Arithmo2-Mistral-7B) a
 
 ## Benchmark Results
 
-Arithmo2-Mistral-7B model is fine-tuned with 4-bit QLoRA on single GPU and is competitive with supervised full-finetuned state-of-the-art Mathematical Reasoning models. Refer to [Comparing Arithmo-Mistral-7B with other LLM models](https://github.com/akjindal53244/Arithmo-Mistral-7B/tree/master#comparing-arithmo-mistral-7b-with-other-llm-models) section for more details.
+Arithmo2-Mistral-7B model is fine-tuned with 4-bit QLoRA on single GPU and is competitive with supervised full-finetuned state-of-the-art Mathematical Reasoning models. Refer to [Comparing Arithmo Models with other LLM models](https://github.com/akjindal53244/Arithmo-Mistral-7B/tree/master#comparing-arithmo-mistral-7b-with-other-llm-models) section for more details.
 
 <table>
     <thead>
@@ -198,8 +198,8 @@ Script is borrowed from official [math repository](https://github.com/hendrycks/
 Expected output: `Total Instances: 5000, Correct Count: 1266, Accuracy (Correct Count/Total Instances): 0.2532`
 
 
-## Comparing Arithmo-Mistral-7B with other LLM models.
-Results for all models except `Arithmo-Mistral-7B` are taken from [MetaMath](https://github.com/meta-math/MetaMath/blob/main/README.MD) repository.
+## Performance on Benchmarks Results
+Results for all models except `Arithmo2-Mistral-7B` and `Arithmo-Mistral-7B` are taken from [MetaMath](https://github.com/meta-math/MetaMath/blob/main/README.MD) repository.
 
 | Model               | GSM8k Pass@1 | MATH Pass@1 | Model Training details |
 |---------------------|--------------|-------------|------------------------|
