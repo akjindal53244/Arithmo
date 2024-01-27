@@ -198,7 +198,7 @@ Script is borrowed from official [math repository](https://github.com/hendrycks/
 Expected output: `Total Instances: 5000, Correct Count: 1266, Accuracy (Correct Count/Total Instances): 0.2532`
 
 
-## Performance on Benchmarks Results
+## Comparing Arithmo2 models with other SFT LLM models
 Results for all models except `Arithmo2-Mistral-7B` and `Arithmo-Mistral-7B` are taken from [MetaMath](https://github.com/meta-math/MetaMath/blob/main/README.MD) repository.
 
 | Model               | GSM8k Pass@1 | MATH Pass@1 | Model Training details |
