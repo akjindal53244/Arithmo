@@ -19,7 +19,7 @@ Both [Arithmo2-Mistral-7B](https://huggingface.co/upaya07/Arithmo2-Mistral-7B) a
 
 ## Benchmark Results
 
-Arithmo2-Mistral-7B model is fine-tuned with 4-bit QLoRA on single GPU and is competitive with supervised full-finetuned state-of-the-art Mathematical Reasoning models. Refer to [Comparing Arithmo models with other SFT LLM models](https://github.com/akjindal53244/Arithmo-Mistral-7B/tree/master#comparing-arithmo-mistral-7b-with-other-llm-models) section for more details.
+Arithmo2-Mistral-7B model is fine-tuned with 4-bit QLoRA on single GPU and is competitive with supervised full-finetuned state-of-the-art Mathematical Reasoning models. Refer to [Comparing Arithmo models with other SFT LLM models](https://github.com/akjindal53244/Arithmo/tree/master?tab=readme-ov-file#comparing-arithmo-models-with-other-sft-llm-models) section for more details.
 
 <table>
     <thead>
