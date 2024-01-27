@@ -227,11 +227,11 @@ Results for all models except `Arithmo2-Mistral-7B` and `Arithmo-Mistral-7B` are
 | WizardMath-13B      | 63.9         | 14.0        |
 | MetaMath-7B         | 66.5         | 19.8        |
 | MetaMath-13B        | 72.3         | 22.4        |
-| Arithmo-Mistral-7B Zero-Shot PoT  | 71.2 | --       | SFT: 4-bit QLoRA |
-| Arithmo-Mistral-7B Zero-Shot CoT  | 74.7 | 25.3       | SFT: 4-bit QLoRA |
-| MetaMath-Mistral-7B  | **77.7** | **28.2**       | SFT: Full fine-tuned |
-| 🔥 **Arithmo2-Mistral-7B Zero-Shot PoT**  | **74.2** | --       | **SFT: 4-bit QLoRA** |
-| 🔥 **Arithmo2-Mistral-7B Zero-Shot CoT**  | **76.4** | **27.2**       | **SFT: 4-bit QLoRA** |
+| Arithmo-Mistral-7B (PoT)  | 71.2 | --       | SFT: 4-bit QLoRA |
+| Arithmo2-Mistral-7B (PoT)  | 74.2 | --       | SFT: 4-bit QLoRA |
+| MetaMath-Mistral-7B  | 77.7 | 28.2       | SFT: Full fine-tuned |
+| Arithmo-Mistral-7B| 74.7 | 25.3       | SFT: 4-bit QLoRA |
+| 🔥 **Arithmo2-Mistral-7B**  | **76.4** | **27.2**       | **SFT: 4-bit QLoRA** |
 
 
 ### Citation
