@@ -234,8 +234,18 @@ Results for all models except `Arithmo2-Mistral-7B` and `Arithmo-Mistral-7B` are
 | 🔥 **Arithmo2-Mistral-7B Zero-Shot CoT**  | **76.4** | **27.2**       | **SFT: 4-bit QLoRA** |
 
 
-## Todos
-- 
+### Citation
+To cite Arithmo models:
+```
+@misc{jindal_2023_arithmo,
+  author = {Jindal, Ashvini},
+  title = {Arithmo-Mistral-7B: Mathematical Reasoning Model},
+  howpublished = {Hugging Face},
+  month = {October},
+  year = {2023},
+  url = {https://huggingface.co/akjindal53244/Arithmo-Mistral-7B}
+}
+```
 
 ### Support My Work
 Building LLMs takes time and resources; if you find my work interesting, your support would be epic! <br>
@@ -243,10 +253,6 @@ Building LLMs takes time and resources; if you find my work interesting, your su
 <a href="https://www.buymeacoffee.com/a_little_learner" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 P.S.: If you are interested in providing compute support, please reach out to [Ashvini Jindal](https://www.linkedin.com/in/ashvini-jindal-26653262/)
-
-
-### Citation
--
 
 
 <h2 id="References">References</h2>
@@ -273,3 +279,6 @@ P.S.: If you are interested in providing compute support, please reach out to [A
   year={2022}
 }
 ```
+
+## Todos
+- 
