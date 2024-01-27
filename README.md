@@ -1,11 +1,11 @@
-## [January 2024] New Model Release: Arithmo2-Mistral-7B
+## Updates
 
-**Arithmo2-Mistral-7B** model improves initially released Arithmo-Mistral-7B model on both GSM8K and MATH benchmarks. Specifically, there is **absolute** improvement of:
-- +1.7% on GSM8K
-- +3.0% on GSM8K PoT
-- +1.9% on MATH
+### [January 2024] New Model Release: Arithmo2-Mistral-7B
 
-We release both [merged model](https://huggingface.co/upaya07/Arithmo2-Mistral-7B) and [LoRA Adapter](https://huggingface.co/upaya07/Arithmo2-Mistral-7B-adapter).
+**Arithmo2-Mistral-7B** model improves initially released Arithmo-Mistral-7B model on both GSM8K and MATH benchmarks. Specifically, there is absolute improvement of **+1.7% on GSM8K, +3.0% on GSM8K PoT, and +1.9% on MATH benchmarks**. We release both [merged model](https://huggingface.co/upaya07/Arithmo2-Mistral-7B) and [LoRA Adapter](https://huggingface.co/upaya07/Arithmo2-Mistral-7B-adapter).
+- Arithmo2-Mistral-7B is trained on same data as Arithmo-Mistral-7B except that we removed both validation and test set of [lila ood subset](https://huggingface.co/datasets/allenai/lila/viewer/ood) to avoid possibility of data leakage.
+- Added [NEFTune](https://arxiv.org/pdf/2310.05914.pdf)
+- Enabled sample packing = true for faster training.
 
 
 # Arithmo Models
